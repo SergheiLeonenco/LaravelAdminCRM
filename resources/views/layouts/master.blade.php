@@ -24,17 +24,6 @@
             stripeKey: "{{config('services.stripe.key')}}"
         }
     </script>
-    <?php if(isDemo()) { ?>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-152899919-3"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'UA-152899919-3');
-        </script>
-    <?php } ?>
     <script src="https://js.stripe.com/v3/"></script>
     @stack('style')
 </head>
@@ -119,10 +108,10 @@
                 class="fa fa-dollar sidebar-icon"></i><span id="menu-txt">{{ __('Sales') }}</span>
                 <i class="icon ion-md-arrow-dropup arrow-side sidebar-arrow"></i></a>
             <div class="collapse" id="sales">
-            <a href="{{ route('invoices.overdue')}}" class="list-group-item childlist"> 
+            <a href="{{ route('invoices.overdue')}}" class="list-group-item childlist">
                 <i class="bullet-point"><span></span></i> {{ __('Overdue') }}
             </a>
-            <a href="{{ route('products.index')}}" class="list-group-item childlist"> 
+            <a href="{{ route('products.index')}}" class="list-group-item childlist">
                 <i class="bullet-point"><span></span></i> {{ __('Products') }}
             </a>
             </div>

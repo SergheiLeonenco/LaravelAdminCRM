@@ -18,3 +18,6 @@ public/build/
 
 # Virtual environment
 .virtualenv_laravel_php_7_1
+
+# Any logs files
+/logs
