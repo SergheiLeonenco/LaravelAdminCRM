@@ -11,6 +11,7 @@ use App\Models\User;
 use Carbon\Carbon;
 use Carbon\CarbonPeriod;
 use DB;
+use Illuminate\Support\Facades\Crypt;
 
 class PagesController extends Controller
 {

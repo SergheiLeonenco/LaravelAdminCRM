@@ -17,7 +17,7 @@
                                 {{ auth()->user()->name }}
                             </div>
                             <div class="topbar-user__card__info">
-                                {{ auth()->user()->department->first()->name }}
+                                Department Name
                             </div>
                         </div>
                     </div>

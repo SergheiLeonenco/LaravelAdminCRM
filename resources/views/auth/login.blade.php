@@ -7,29 +7,21 @@
                 <div class="tablet">
                  <form class="form-horizontal" role="form" method="POST" action="{{ url('/login') }}">
                             {!! csrf_field() !!}
-
-                            @if(isDemo()) 
-                            <div class="alert alert-info">
-                                <strong>Demo login info</strong> 
-                                <p>Email: demo@daybydaycrm.com</p>
-                                <p>Password: Daybydaycrm123</p>
-                            </div>
-                            @endif
                             <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                             <div class="inner-addon right-addon">
                                 <div class="col-md-12 input-group-lg">
                                     <i class="fa fa-user" aria-hidden="true"></i>
-                                    <input type="email" value="{{isDemo() ? 'demo@daybydaycrm.com' : ''}}" class="form-control" style="border-radius: 4px; box-shadow:0px 2px 4px rgba(0,0,0,0.18); padding-right:40px; " name="email" value="{{ old('email') }}" placeholder="E-mail address">
+                                    <input type="email" value="" class="form-control" style="border-radius: 4px; box-shadow:0px 2px 4px rgba(0,0,0,0.18); padding-right:40px; " name="email" value="{{ old('email') }}" placeholder="E-mail address">
 
                                 </div>
                                 </div>
                             </div>
-                            
+
                             <div class="form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             <div class="inner-addon right-addon">
                                 <div class="col-md-12 input-group-lg">
                                 <i class="fa fa-lock" aria-hidden="true"></i>
-                                    <input type="password" class="form-control" value="{{isDemo() ? 'Daybydaycrm123' : ''}}"  style="border-radius: 4px; box-shadow:0px 2px 4px rgba(0,0,0,0.18);" name="password" placeholder="Password">
+                                    <input type="password" class="form-control" value=""  style="border-radius: 4px; box-shadow:0px 2px 4px rgba(0,0,0,0.18);" name="password" placeholder="Password">
                                 </div>
                             </div>
                         </div>
@@ -45,7 +37,7 @@
 
                             <div class="form-group">
                                 <div class="col-md-12">
-                                
+
                                     <button type="submit" class="btn btn-success btn-lg btn-block" style="border-radius: 2px; box-shadow: 0px 2px 4px rgba(0,0,0,0.18);   background: #536be2; border: none;">
                                         <i class="fa fa-btn fa-sign-in"></i>Login
                                     </button>
@@ -56,7 +48,7 @@
                                 </div>
                             </div>
                             <div class="col-md-12">
-                               
+
                                  @if ($errors->has('email'))
                                         <span class="help-block">
                                         <strong>{{ $errors->first('email') }}</strong>
